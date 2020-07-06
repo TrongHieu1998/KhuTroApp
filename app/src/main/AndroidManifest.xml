@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.khutroapp">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.screens.activity_contract.ActivityContract"></activity>
+        <activity android:name=".ui.screens.activity_indexwater.ActivityIndexWater" />
+        <activity android:name=".ui.screens.activity_infringe.ActivityInfringe" />
+        <activity android:name=".ui.screens.activity_tabernacle.ActivityTabernacle" />
+        <activity android:name=".ui.screens.activity_roommate.ActivityRoommate" />
+        <activity android:name=".ui.screens.activity_invoice.ActivityInvoice" />
+        <activity android:name=".ui.screens.activity_register.DangKiActivity" />
+        <activity android:name=".ui.screens.activity_login.ActivityLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.MainActivity"
+            android:label="@string/app_name" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

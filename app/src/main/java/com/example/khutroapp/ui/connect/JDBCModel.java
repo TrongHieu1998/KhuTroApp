@@ -14,7 +14,7 @@ public class JDBCModel {
         Connection objConn = null;
         String sConnURL = null;
 
-        JDBCObject objEntity = new JDBCObject("192.168.1.83", "sa", "sa2012", "QL_NHATRO","1433");
+        JDBCObject objEntity = new JDBCObject("192.168.0.112", "sa", "sa2012", "QL_NHATRO","1433");
 
         try {
             Class.forName(objEntity.getsClass());

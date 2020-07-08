@@ -1,6 +1,7 @@
 package com.example.khutroapp.ui.screens.activity_invoice.fragment_unpaid;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 
@@ -9,9 +10,17 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 
 import com.example.khutroapp.R;
+import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.adapter.PaidAdapter;
+import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.connect.PaidConnect;
+import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
+import com.example.khutroapp.ui.screens.activity_invoice.fragment_unpaid.connect.UnpaidConnect;
 import com.example.khutroapp.ui.screens.fragment_home.HomeFragment;
+
+import java.sql.SQLException;
+import java.util.List;
 
 
 public class FragmentUnpaid extends Fragment {
@@ -50,7 +59,20 @@ public class FragmentUnpaid extends Fragment {
         // Inflate the layout for this fragment
         return viewRoot;
     }
+    String users;
+    UnpaidConnect unpaidConnect= new UnpaidConnect();
+    PaidAdapter adapter;
     void mapping(View view){
-
+        Intent intent = getActivity().getIntent();
+        users = intent.getStringExtra("Username");
+        List<PaidModel> paidModels= null;
+        try {
+            paidModels = unpaidConnect.loadPaid(users);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        final ListView listView = view.findViewById(R.id.listviewUnPaid);
+        adapter= new PaidAdapter(getContext(),paidModels);
+        listView.setAdapter(adapter);
     }
 }

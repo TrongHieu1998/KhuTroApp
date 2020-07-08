@@ -62,9 +62,6 @@ public class HomeFragment extends Fragment {
         return viewRoot;
     }
     String users;
-    RecyclerView recyclerView;
-    HomeAdapter adapter;
-    ArrayList<HomeModel> arrayList;
     RelativeLayout invoice,tabernacle,contract,roommate,infringe,indexwater;
     void mapping(View view){
 

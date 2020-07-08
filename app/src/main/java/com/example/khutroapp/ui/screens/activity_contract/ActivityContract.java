@@ -4,9 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
+import com.example.khutroapp.ui.screens.activity_contract.adapter.ContractAdapter;
+import com.example.khutroapp.ui.screens.activity_contract.connect.ContractConnect;
+import com.example.khutroapp.ui.screens.activity_contract.model.ContractModel;
 import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.adapter.PaidAdapter;
 import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.connect.PaidConnect;
 import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
@@ -16,8 +20,8 @@ import java.util.List;
 
 public class ActivityContract extends AppCompatActivity {
     String users;
-    PaidConnect paidConnect= new PaidConnect();
-    PaidAdapter adapter;
+    ContractConnect contractConnect= new ContractConnect();
+    ContractAdapter adapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,14 +30,14 @@ public class ActivityContract extends AppCompatActivity {
         Intent intent = getIntent();
         users = intent.getStringExtra("Username");
 
-        List<PaidModel> paidModels= null;
+        List<ContractModel> contractModels= null;
         try {
-            paidModels = paidConnect.loadPaid(users);
+            contractModels = contractConnect.loadContract(users);
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        final ListView listView = findViewById(R.id.listview);
-        adapter= new PaidAdapter(this,paidModels);
+        final ListView listView = findViewById(R.id.listviewContract);
+        adapter= new ContractAdapter(this,contractModels);
         listView.setAdapter(adapter);
     }
 }

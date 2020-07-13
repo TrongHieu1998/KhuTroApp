@@ -8,8 +8,6 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.khutroapp.R;
-import com.example.khutroapp.ui.screens.activity_contract.adapter.ContractAdapter;
-import com.example.khutroapp.ui.screens.activity_contract.model.ContractModel;
 import com.example.khutroapp.ui.screens.activity_roommate.model.RoommateModel;
 
 import java.util.List;

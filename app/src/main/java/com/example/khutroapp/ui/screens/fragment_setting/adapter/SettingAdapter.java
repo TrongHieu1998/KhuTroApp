@@ -1,16 +1,18 @@
 package com.example.khutroapp.ui.screens.fragment_setting.adapter;
 
 import android.content.Context;
+import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.khutroapp.R;
-import com.example.khutroapp.ui.screens.activity_roommate.adapter.RoommateAdapter;
-import com.example.khutroapp.ui.screens.activity_roommate.model.RoommateModel;
 import com.example.khutroapp.ui.screens.fragment_setting.model.SettingModel;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -52,6 +54,7 @@ public class SettingAdapter extends BaseAdapter {
             hoder.gioitinh=(TextView)convertView.findViewById(R.id.txt_gender);
             hoder.sdt=(TextView) convertView.findViewById(R.id.txt_phonenumber);
             hoder.quequan=(TextView) convertView.findViewById(R.id.txt_hometow);
+            hoder.avatar=(ImageView) convertView.findViewById(R.id.img_avatar);
             convertView.setTag(hoder);
         } else {
             hoder=(SettingAdapter.ViewHolder)convertView.getTag();
@@ -63,9 +66,14 @@ public class SettingAdapter extends BaseAdapter {
         hoder.gioitinh.setText(settingModell.getGioitinh());
         hoder.sdt.setText(settingModell.getSdt());
         hoder.quequan.setText(settingModell.getQuequan());
+//        Glide.with(context)
+//                .load(settingModell.getAvatar())
+//                .into(hoder.avatar);
+        Picasso.get().load(settingModell.getAvatar()).into(hoder.avatar);
         return convertView;
     }
     static class ViewHolder{
         TextView hoten,ngaysinh,gioitinh,sdt,quequan;
+        ImageView avatar;
     }
 }

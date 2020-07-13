@@ -23,17 +23,18 @@
         android:layout_marginLeft="20dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageButton
-            android:src="@drawable/ic_call"
-            android:background="@null"
-            android:layout_width="60dp"
-            android:layout_height="60dp">
-        </ImageButton>
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@drawable/ic_call"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </ImageView>
         <EditText
             android:paddingLeft="10dp"
             android:layout_margin="10dp"
             android:textSize="15dp"
+            android:text="KT001"
             android:background="@drawable/custom_vien"
             android:id="@+id/edt_sdt"
             android:hint="Số điện thoại"
@@ -47,18 +48,20 @@
         android:layout_marginLeft="20dp"
         android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <ImageButton
-            android:src="@drawable/ic_password"
-            android:background="@null"
-            android:layout_width="60dp"
-            android:layout_height="60dp">
-        </ImageButton>
+        android:layout_height="60dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@drawable/ic_password"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </ImageView>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             app:passwordToggleEnabled="true"
             android:layout_height="match_parent">
             <EditText
+                android:drawableLeft="@drawable/ic_password"
+                android:text="abc"
                 android:paddingLeft="10dp"
                 android:layout_margin="10dp"
                 android:textSize="15dp"

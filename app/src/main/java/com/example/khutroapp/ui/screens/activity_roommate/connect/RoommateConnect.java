@@ -3,7 +3,6 @@ package com.example.khutroapp.ui.screens.activity_roommate.connect;
 import android.os.AsyncTask;
 
 import com.example.khutroapp.ui.connect.JDBCController;
-import com.example.khutroapp.ui.screens.activity_contract.model.ContractModel;
 import com.example.khutroapp.ui.screens.activity_roommate.model.RoommateModel;
 
 import java.sql.Connection;

@@ -5,16 +5,6 @@
     android:background="#D7D7D7"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
-        android:background="#EFAF50"
-        android:textColor="#333232"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:text="THÔNG TIN HỢP ĐỒNG"
-        android:layout_width="match_parent"
-        android:layout_height="40dp">
-    </TextView>
     <LinearLayout
         android:orientation="vertical"
         android:background="#FBFBFB"
@@ -183,7 +173,7 @@
             android:layout_height="match_parent">
             <TextView
                 android:textSize="17sp"
-                android:text="Tình trạng hợp đồng: "
+                android:text="Tình trạng phòng: "
                 android:layout_width="wrap_content"
                 android:layout_height="25dp">
             </TextView>

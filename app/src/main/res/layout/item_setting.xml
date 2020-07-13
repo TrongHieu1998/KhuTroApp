@@ -8,11 +8,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
     <RelativeLayout
-        android:layout_weight="4.5"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="270dp">
         <LinearLayout
-            android:background="#fff"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ImageView
@@ -22,27 +20,26 @@
             </ImageView>
         </LinearLayout>
         <ImageView
-            android:background="@drawable/custom_button_circle"
-            android:id="@+id/avatar"
+            android:id="@+id/img_avatar"
             android:layout_centerInParent="true"
             android:layout_width="120dp"
             android:layout_height="120dp">
         </ImageView>
-
-        <!--        <de.hdodenhof.circleimageview.CircleImageView-->
-        <!--            xmlns:app="http://schemas.android.com/apk/res-auto"-->
-        <!--            android:id="@+id/profile_image"-->
-        <!--            android:layout_width="96dp"-->
-        <!--            android:layout_height="96dp"-->
-        <!--            android:src="@drawable/avatar"-->
-        <!--            app:civ_border_width="2dp"-->
-        <!--            app:civ_border_color="#FF000000"/>-->
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--                    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--                    android:id="@+id/img_avatar"-->
+<!--                    android:layout_centerInParent="true"-->
+<!--                    android:layout_width="96dp"-->
+<!--                    android:layout_height="96dp"-->
+<!--                    android:src="@drawable/avatar"-->
+<!--                    app:civ_border_width="2dp"-->
+<!--                    app:civ_border_color="#FF000000"/>-->
         <TextView
             android:id="@+id/txt_name"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:layout_centerInParent="true"
-            android:layout_below="@+id/avatar"
+            android:layout_below="@+id/img_avatar"
             android:text="Bùi Thị Ninh"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -51,8 +48,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="2.5"
+        android:layout_height="180dp"
         android:orientation="horizontal"
         android:weightSum="10">
 
@@ -123,7 +119,6 @@
                 android:drawablePadding="15dp"
                 android:text="Nữ"
                 android:textSize="15sp"></TextView>
-
             <TextView
                 android:id="@+id/txt_birthday"
                 android:layout_width="match_parent"
@@ -132,7 +127,6 @@
                 android:drawablePadding="15dp"
                 android:text="16/02/1998"
                 android:textSize="15sp"></TextView>
-
             <TextView
                 android:id="@+id/txt_hometow"
                 android:layout_width="match_parent"
@@ -141,58 +135,6 @@
                 android:drawablePadding="15dp"
                 android:text="Quãng Ngải"
                 android:textSize="15sp"></TextView>
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:orientation="horizontal"
-        android:layout_weight="2.9"
-        android:layout_width="match_parent"
-        android:layout_height="0dp">
-        <LinearLayout
-            android:layout_marginLeft="20dp"
-            android:orientation="vertical"
-            android:layout_width="340dp"
-            android:layout_height="match_parent">
-            <TextView
-                android:textColor="#111010"
-                android:textSize="20dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:drawableLeft="@drawable/ic_person"
-                android:text="Thiết lập thông tin cá nhân"
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
-            </TextView>
-            <TextView
-                android:textColor="#111010"
-                android:layout_marginTop="20dp"
-                android:textSize="20dp"
-                android:drawablePadding="10dp"
-                android:gravity="center_vertical"
-                android:drawableLeft="@drawable/ic_logout"
-                android:text="Đăng xuất"
-                android:layout_width="match_parent"
-                android:layout_height="30dp">
-            </TextView>
-        </LinearLayout>
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="60dp"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/btn_setting"
-                android:background="@drawable/ic_next"
-                android:layout_width="30dp"
-                android:layout_height="30dp">
-            </ImageView>
-            <ImageView
-                android:id="@+id/btn_logout"
-                android:background="@drawable/ic_next"
-                android:layout_marginTop="10dp"
-                android:layout_width="30dp"
-                android:layout_height="30dp">
-            </ImageView>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>

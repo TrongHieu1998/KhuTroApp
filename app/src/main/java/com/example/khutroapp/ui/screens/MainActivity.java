@@ -1,12 +1,15 @@
-package com.example.khutroapp.ui;
+package com.example.khutroapp.ui.screens;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 
 import com.example.khutroapp.R;
 import com.example.khutroapp.ui.screens.fragment_home.HomeFragment;
 import com.example.khutroapp.ui.screens.fragment_setting.SettingFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.onesignal.OSPermissionSubscriptionState;
+import com.onesignal.OneSignal;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
             return loadFragment(menuItem.getItemId());
         }
     };
+    private BottomNavigationView nav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,13 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
-        BottomNavigationView nav = findViewById(R.id.nav_view);
+        // Mai test máy thật
+//        OSPermissionSubscriptionState state;
+//        state = OneSignal.getPermissionSubscriptionState();
+//        Log.d("Hieu",state.getSubscriptionStatus().getUserId());
+
+
+        nav = findViewById(R.id.nav_view);
         nav.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         loadFragment(R.id.navigation_home);
 
@@ -44,12 +54,20 @@ public class MainActivity extends AppCompatActivity {
 //         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 //        NavigationUI.setupWithNavController(navView, navController);
     }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        loadFragment(R.id.navigation_home);
+    }
+
     public boolean loadFragment(int id) {
         String backStateName = "Nhà trọ";
         Fragment fragment = null;
         switch (id) {
             case R.id.navigation_setting:
                 fragment = SettingFragment.getInstance();
+                backStateName = "Cài đặt";
                 break;
             case R.id.navigation_home:
                 fragment =HomeFragment.getInstance();

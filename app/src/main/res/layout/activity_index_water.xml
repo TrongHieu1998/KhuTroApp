@@ -4,12 +4,34 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".ui.screens.activity_indexwater.ActivityIndexWater">
+    <LinearLayout
+        android:background="#EFAF50"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </ImageView>
+        <TextView
+            android:textColor="#333232"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="CHỈ SỐ ĐIỆN NƯỚC"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        </TextView>
+    </LinearLayout>
     <ListView
-        android:background="#D7D7D7"
+        android:background="#fff"
         android:id="@+id/listviewIndexWater"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
     </ListView>
 </LinearLayout>

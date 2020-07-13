@@ -4,16 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
 import com.example.khutroapp.ui.screens.activity_contract.adapter.ContractAdapter;
 import com.example.khutroapp.ui.screens.activity_contract.connect.ContractConnect;
 import com.example.khutroapp.ui.screens.activity_contract.model.ContractModel;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.adapter.PaidAdapter;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.connect.PaidConnect;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
 
 import java.sql.SQLException;
 import java.util.List;

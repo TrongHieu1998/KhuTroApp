@@ -8,16 +8,29 @@
     android:layout_height="match_parent"
     android:weightSum="10"
     tools:context=".ui.screens.activity_invoice.ActivityInvoice">
-    <TextView
-        android:text="Danh sách hóa đơn"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:textSize="25sp"
+    <LinearLayout
         android:layout_weight="1"
-        android:textColor="#FF5722"
         android:layout_width="match_parent"
         android:layout_height="0dp">
-    </TextView>
+        <ImageButton
+            android:id="@+id/img_backInvoice"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/custom_button_circle"
+            android:src="@drawable/ic_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </ImageButton>
+        <TextView
+            android:text="Danh sách hóa đơn"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="25sp"
+            android:textColor="#FF5722"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </TextView>
+    </LinearLayout>
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayout"
         android:layout_weight="1"

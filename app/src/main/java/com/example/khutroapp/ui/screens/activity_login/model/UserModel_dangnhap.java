@@ -21,7 +21,7 @@ public class UserModel_dangnhap {
     }
 
     public Boolean kiemtra_user(String manv, String pass) throws SQLException {
-         boolean result = false;
+        boolean result = false;
         List<item_dangnhap> list = new ArrayList<>();
         connection = jdbcController.ConnnectionData();
         String sql = "select MAKT, MK from KHACHTHUE \n" +

@@ -20,6 +20,7 @@ import com.example.khutroapp.ui.screens.activity_invoice.fragment_unpaid.connect
 import com.example.khutroapp.ui.screens.fragment_home.HomeFragment;
 
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -65,7 +66,7 @@ public class FragmentUnpaid extends Fragment {
     void mapping(View view){
         Intent intent = getActivity().getIntent();
         users = intent.getStringExtra("Username");
-        List<PaidModel> paidModels= null;
+        List<PaidModel> paidModels= new ArrayList<>();
         try {
             paidModels = unpaidConnect.loadPaid(users);
         } catch (SQLException e) {

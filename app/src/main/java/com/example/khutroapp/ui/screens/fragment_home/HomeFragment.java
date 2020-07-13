@@ -9,10 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
-
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.khutroapp.R;
 import com.example.khutroapp.ui.screens.activity_contract.ActivityContract;
@@ -21,10 +18,7 @@ import com.example.khutroapp.ui.screens.activity_infringe.ActivityInfringe;
 import com.example.khutroapp.ui.screens.activity_invoice.ActivityInvoice;
 import com.example.khutroapp.ui.screens.activity_roommate.ActivityRoommate;
 import com.example.khutroapp.ui.screens.activity_tabernacle.ActivityTabernacle;
-import com.example.khutroapp.ui.screens.fragment_home.adapter.HomeAdapter;
-import com.example.khutroapp.ui.screens.fragment_home.model.HomeModel;
 
-import java.util.ArrayList;
 
 public class HomeFragment extends Fragment {
     public HomeFragment() {
@@ -49,17 +43,19 @@ public class HomeFragment extends Fragment {
     }
 
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        viewRoot = createView(savedInstanceState);
-        super.onCreate(savedInstanceState);
-        mapping(viewRoot);
-    }
+//    @Override
+//    public void onCreate(Bundle savedInstanceState) {
+//        viewRoot = createView(savedInstanceState);
+//        super.onCreate(savedInstanceState);
+//        mapping(viewRoot);
+//    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        View view = getActivity().getLayoutInflater().inflate(R.layout.fragment_home, null, false);
         // Inflate the layout for this fragment
-        return viewRoot;
+        mapping(view);
+        return view;
     }
     String users;
     RelativeLayout invoice,tabernacle,contract,roommate,infringe,indexwater;

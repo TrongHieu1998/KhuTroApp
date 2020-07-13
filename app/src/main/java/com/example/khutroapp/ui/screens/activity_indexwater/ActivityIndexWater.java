@@ -10,9 +10,6 @@ import com.example.khutroapp.R;
 import com.example.khutroapp.ui.screens.activity_indexwater.adapter.IndexWaterAdapter;
 import com.example.khutroapp.ui.screens.activity_indexwater.connect.IndexWaterConnect;
 import com.example.khutroapp.ui.screens.activity_indexwater.model.IndexWaterModel;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.adapter.PaidAdapter;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.connect.PaidConnect;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
 
 import java.sql.SQLException;
 import java.util.List;

@@ -1,9 +1,9 @@
 package com.example.khutroapp.ui.screens.fragment_setting.connect;
 
 import android.os.AsyncTask;
+import android.util.Log;
 
 import com.example.khutroapp.ui.connect.JDBCController;
-import com.example.khutroapp.ui.screens.activity_roommate.model.RoommateModel;
 import com.example.khutroapp.ui.screens.fragment_setting.model.SettingModel;
 
 import java.sql.Connection;
@@ -26,17 +26,22 @@ public class SettingConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT TENKT,KHACHTHUE.GIOITINH,SDT,KHACHTHUE.NGAYSINH,KHACHTHUE.QUEQUAN FROM PHONG, KHACHTHUE\n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG \n" +
-                "AND PHONG.MAPHONG=(SELECT PHONG.MAPHONG FROM PHONG, KHACHTHUE \n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND KHACHTHUE.MAKT='"+makt+"')";
+        String sql ="SELECT TENKT,GIOITINH,SDT,NGAYSINH,QUEQUAN,ANH \n" +
+                "FROM KHACHTHUE\n" +
+                "WHERE KHACHTHUE.MAKT='"+makt+"' ";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
-            boolean add = list.add(new SettingModel( rs.getString("TENKT"), rs.getDate("NGAYSINH").toString(),
-                    rs.getString("GIOITINH"),rs.getString("SDT"),rs.getString("QUEQUAN")
+            boolean add = list.add(new SettingModel(
+                    rs.getString("TENKT"),
+                    rs.getDate("NGAYSINH").toString(),
+                    rs.getString("GIOITINH"),
+                    rs.getString("SDT"),
+                    rs.getString("QUEQUAN"),
+                    rs.getString("ANH")
             ));
         }
+
         connection.close();// Đóng kết nối
         return list;
     }

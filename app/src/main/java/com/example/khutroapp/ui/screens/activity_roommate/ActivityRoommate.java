@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
-import com.example.khutroapp.ui.screens.activity_contract.adapter.ContractAdapter;
 import com.example.khutroapp.ui.screens.activity_roommate.adapter.RoommateAdapter;
 import com.example.khutroapp.ui.screens.activity_roommate.connect.RoommateConnect;
 import com.example.khutroapp.ui.screens.activity_roommate.model.RoommateModel;

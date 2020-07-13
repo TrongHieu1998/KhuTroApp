@@ -3,28 +3,17 @@ package com.example.khutroapp.ui.screens.activity_contract.model;
 public class ContractModel {
     String mahd,tennguoiki,tentang,tenphong,loaiphong,ngaylap,ngayhethan,tiencoc,tinhtrang;
 
-    public ContractModel(String mahd, String tennguoiki, String tentang, String tenphong, String loaiphong, String ngaylap, String ngayhethan, String tiencoc, String tinhtrang) {
+    public ContractModel(String mahd, String tennguoiki, String tentang, String loaiphong, String tenphong, String ngaylap, String ngayhethan, String tiencoc, String tinhtrang) {
         this.mahd = mahd;
         this.tennguoiki = tennguoiki;
         this.tentang = tentang;
-        this.tenphong = tenphong;
         this.loaiphong = loaiphong;
+        this.tenphong = tenphong;
         this.ngaylap = ngaylap;
         this.ngayhethan = ngayhethan;
         this.tiencoc = tiencoc;
         this.tinhtrang = tinhtrang;
     }
-
-//    public ContractModel(String tennguoiki, String tentang, String loaiphong, String tenphong,String tinhtrang) {
-//        this.tennguoiki = tennguoiki;
-//        this.tentang = tentang;
-//        this.loaiphong = loaiphong;
-//        this.tenphong = tenphong;
-//        this.ngaylap = ngaylap;
-//        this.ngayhethan = ngayhethan;
-//        this.tiencoc = tiencoc;
-//        this.tinhtrang = tinhtrang;
- //   }
 
     public String getMahd() {
         return mahd;

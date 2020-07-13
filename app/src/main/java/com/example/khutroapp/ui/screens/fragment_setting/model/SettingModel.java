@@ -1,14 +1,24 @@
 package com.example.khutroapp.ui.screens.fragment_setting.model;
 
-public class SettingModel {
-    String tenkt,ngaysinh,gioitinh,sdt,quequan;
+import android.provider.MediaStore;
 
-    public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan) {
+public class SettingModel {
+    String tenkt,ngaysinh,gioitinh,sdt,quequan,avatar;
+
+    public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan, String avatar) {
         this.tenkt = tenkt;
         this.ngaysinh = ngaysinh;
         this.gioitinh = gioitinh;
         this.sdt = sdt;
         this.quequan = quequan;
+        this.avatar = avatar;
+    }
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
     }
 
     public String getTenkt() {

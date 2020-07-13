@@ -7,16 +7,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.screens.activity_roommate.ActivityRoommate">
-    <TextView
+    <LinearLayout
         android:background="#EFAF50"
-        android:textColor="#333232"
-        android:textStyle="bold"
-        android:textSize="20dp"
-        android:gravity="center"
-        android:text="BẠN CÙNG PHÒNG"
         android:layout_width="match_parent"
         android:layout_height="40dp">
-    </TextView>
+        <ImageView
+            android:layout_gravity="center"
+            android:background="@null"
+            android:src="@drawable/ic_back"
+            android:layout_width="30dp"
+            android:layout_height="30dp">
+        </ImageView>
+        <TextView
+            android:textColor="#333232"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:text="BẠN CÙNG PHÒNG"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        </TextView>
+    </LinearLayout>
+
     <ListView
         android:id="@+id/listviewRoommate"
         android:layout_width="match_parent"

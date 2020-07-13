@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Mã vi phạm: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_mavipham"
+                android:textSize="17sp"
+                android:text="VP001"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Ngày vi phạm: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_ngayvipham"
+                android:textSize="17sp"
+                android:text="11/07/2020"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tên khách thuê: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tenkt"
+                android:textSize="17sp"
+                android:text="Phạm Trọng Hiếu"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Nội vi đã vi phạm: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_noidung"
+                android:textSize="17sp"
+                android:text="Cấm rượu bia"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Hình phạt: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_hinhphat"
+                android:textSize="17sp"
+                android:text="20.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="17sp"
+                android:text="Ghi chú: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_ghichu"
+                android:textSize="17sp"
+                android:text="Vi phạm nhiều lần hình phạt tăng gấp đôi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

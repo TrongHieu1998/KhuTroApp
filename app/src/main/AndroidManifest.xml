@@ -13,13 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.screens.activityaccount.ActivityAccount"></activity>
+        <activity android:name=".ui.screens.activityaccount.ActivityAccount" >
+        </activity>
         <activity android:name=".ui.screenchutro.MainActivityChuTro">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".ui.screens.activity_contract.ActivityContract" />
         <activity android:name=".ui.screens.activity_indexwater.ActivityIndexWater" />
@@ -31,7 +34,6 @@
         <activity android:name=".ui.screens.activity_login.ActivityLogin">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

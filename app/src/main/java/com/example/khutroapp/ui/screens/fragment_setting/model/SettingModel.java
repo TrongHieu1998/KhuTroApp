@@ -13,6 +13,13 @@ public class SettingModel {
         this.quequan = quequan;
         this.avatar = avatar;
     }
+    public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan) {
+        this.tenkt = tenkt;
+        this.ngaysinh = ngaysinh;
+        this.gioitinh = gioitinh;
+        this.sdt = sdt;
+        this.quequan = quequan;
+    }
     public String getAvatar() {
         return avatar;
     }

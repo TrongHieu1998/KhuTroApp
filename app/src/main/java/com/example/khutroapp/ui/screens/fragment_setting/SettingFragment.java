@@ -25,10 +25,7 @@ import java.util.List;
 
 
 public class SettingFragment extends Fragment implements View.OnClickListener {
-    String users;
-    ImageView btn_setting,btn_logout;
-    SettingAdapter adapter;
-    SettingConnect settingConnect = new SettingConnect();
+
 
     //SettingAdapet1 adapter1;
 //    ArrayList<SettingModel> settingModels=new ArrayList<>();
@@ -68,29 +65,23 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         return viewRoot;
     }
 
+    String users;
+    ImageView btn_setting,btn_logout;
+    SettingAdapter adapter;
+    SettingConnect settingConnect = new SettingConnect();
     void mapping(View view){
 
         Intent intent =getActivity().getIntent();
         users = intent.getStringExtra("Username");
-        List<SettingModel> settingModels= null;
+        List<SettingModel> settingModels =null;
         try {
             settingModels = settingConnect.loadSetting(users);
         } catch (SQLException e) {
             e.printStackTrace();
         }
         final ListView listView = view.findViewById(R.id.listviewSetting);
-//        settingModels=settingConnect.loadSetting(users);
         adapter= new SettingAdapter(getContext(),settingModels);
         listView.setAdapter(adapter);
-
-//        List<SettingModel> settingModels= null;
-//        try {
-//            settingModels = settingConnect.loadSetting(users);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//        }
-//        adapter= new SettingAdapter(getContext(),settingModels);
-//        listView.setAdapter(adapter);
 
         btn_setting=view.findViewById(R.id.btn_setting);
         btn_logout=view.findViewById(R.id.btn_logout);

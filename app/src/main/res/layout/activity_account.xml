@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent"
-    tools:context=".ui.screens.activityaccount.ActivityAccount">
+    tools:context=".ui.screens.activity_account.ActivityAccount">
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -49,7 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <TextView
-            android:layout_marginTop="30dp"
+            android:layout_marginTop="20dp"
             android:textSize="17dp"
             android:text="Họ tên"
             android:layout_width="match_parent"
@@ -64,7 +64,7 @@
             android:layout_height="35dp">
         </EditText>
         <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textSize="17dp"
             android:text="Số điện thoại"
             android:layout_width="match_parent"
@@ -79,7 +79,7 @@
             android:layout_height="35dp">
         </EditText>
         <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textSize="17dp"
             android:text="Ngày sinh"
             android:layout_width="match_parent"
@@ -94,7 +94,7 @@
             android:layout_height="35dp">
         </EditText>
         <TextView
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:textSize="17dp"
             android:text="Địa chỉ"
             android:layout_width="match_parent"
@@ -119,5 +119,10 @@
             android:layout_width="match_parent"
             android:layout_height="50dp">
         </Button>
+        <ListView
+            android:id="@+id/listviewAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ListView>
     </LinearLayout>
 </LinearLayout>

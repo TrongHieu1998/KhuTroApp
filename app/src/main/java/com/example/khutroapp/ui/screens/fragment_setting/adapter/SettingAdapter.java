@@ -54,7 +54,7 @@ public class SettingAdapter extends BaseAdapter {
             hoder.gioitinh=(TextView)convertView.findViewById(R.id.txt_gender);
             hoder.sdt=(TextView) convertView.findViewById(R.id.txt_phonenumber);
             hoder.quequan=(TextView) convertView.findViewById(R.id.txt_hometow);
-            hoder.avatar=(ImageView) convertView.findViewById(R.id.img_avatar);
+//            hoder.avatar=(ImageView) convertView.findViewById(R.id.img_avatar);
             convertView.setTag(hoder);
         } else {
             hoder=(SettingAdapter.ViewHolder)convertView.getTag();
@@ -69,7 +69,7 @@ public class SettingAdapter extends BaseAdapter {
 //        Glide.with(context)
 //                .load(settingModell.getAvatar())
 //                .into(hoder.avatar);
-        Picasso.get().load(settingModell.getAvatar()).into(hoder.avatar);
+//        Picasso.get().load(settingModell.getAvatar()).into(hoder.avatar);
         return convertView;
     }
     static class ViewHolder{

@@ -13,17 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.screens.activityaccount.ActivityAccount" >
+        <activity android:name=".ui.screenchutro.activity_login_ct.ActivityLoginCT"></activity>
+        <activity android:name=".ui.ActivityWelcom" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".ui.screenchutro.MainActivityChuTro">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+        <activity android:name=".ui.screens.activity_account.ActivityAccount" />
+        <activity android:name=".ui.screenchutro.MainActivityChuTro" />
         <activity android:name=".ui.screens.activity_contract.ActivityContract" />
         <activity android:name=".ui.screens.activity_indexwater.ActivityIndexWater" />
         <activity android:name=".ui.screens.activity_infringe.ActivityInfringe" />
@@ -32,10 +31,7 @@
         <activity android:name=".ui.screens.activity_invoice.ActivityInvoice" />
         <activity android:name=".ui.screens.activity_register.DangKiActivity" />
         <activity android:name=".ui.screens.activity_login.ActivityLogin">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".ui.screens.MainActivity"

@@ -78,65 +78,65 @@ public class FragmentHomeCT extends Fragment {
             fliperImage(imgs);
         }
         // chuyển qua màn hình hợp đồng
-        contract=view.findViewById(R.id.contract);
-        contract.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityContract.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
-        // chuyển qua màn hình hóa đơn
-        invoice=view.findViewById(R.id.invoice);
-        invoice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityInvoice.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
-        // chuyển qua màn hình tạm trú
-        tabernacle=view.findViewById(R.id.tabernacle);
-        tabernacle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityTabernacle.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
-        // chuyển qua màn hình bạn cùng phòng
-        roommate=view.findViewById(R.id.roommate);
-        roommate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityRoommate.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
-        // chuyển qua màn hình vi phạm
-        infringe=view.findViewById(R.id.infringe);
-        infringe.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityInfringe.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
-        // chuyển qua màn hình tạm trú
-        indexwater=view.findViewById(R.id.indexwater);
-        indexwater.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(getContext(), ActivityIndexWater.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-            }
-        });
+//        contract=view.findViewById(R.id.contract);
+//        contract.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityContract.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+//        });
+//        // chuyển qua màn hình hóa đơn
+//        invoice=view.findViewById(R.id.invoice);
+//        invoice.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityInvoice.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+//        });
+//        // chuyển qua màn hình tạm trú
+//        tabernacle=view.findViewById(R.id.tabernacle);
+//        tabernacle.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityTabernacle.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+//        });
+//        // chuyển qua màn hình bạn cùng phòng
+//        roommate=view.findViewById(R.id.roommate);
+//        roommate.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityRoommate.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+//        });
+//        // chuyển qua màn hình vi phạm
+//        infringe=view.findViewById(R.id.infringe);
+//        infringe.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityInfringe.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+//        });
+//        // chuyển qua màn hình tạm trú
+//        indexwater=view.findViewById(R.id.indexwater);
+//        indexwater.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(getContext(), ActivityIndexWater.class);
+//                intent.putExtra("Username", users);
+//                startActivity(intent);
+//            }
+ //       });
     }
     ViewFlipper viewFlipper;
     public void fliperImage(int imgview)

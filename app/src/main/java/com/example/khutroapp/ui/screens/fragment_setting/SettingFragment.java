@@ -2,7 +2,6 @@ package com.example.khutroapp.ui.screens.fragment_setting;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,17 +13,16 @@ import androidx.fragment.app.Fragment;
 
 import com.example.khutroapp.R;
 import com.example.khutroapp.ui.screens.activity_login.ActivityLogin;
-import com.example.khutroapp.ui.screens.activityaccount.ActivityAccount;
+import com.example.khutroapp.ui.screens.activity_account.ActivityAccount;
 import com.example.khutroapp.ui.screens.fragment_setting.adapter.SettingAdapter;
 import com.example.khutroapp.ui.screens.fragment_setting.connect.SettingConnect;
 import com.example.khutroapp.ui.screens.fragment_setting.model.SettingModel;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 
-public class SettingFragment extends Fragment implements View.OnClickListener {
+public class SettingFragment extends Fragment {
 
 
     //SettingAdapet1 adapter1;
@@ -84,28 +82,24 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         listView.setAdapter(adapter);
 
         btn_setting=view.findViewById(R.id.btn_setting);
+        btn_setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(), ActivityAccount.class);
+                intent.putExtra("Username", users);
+                startActivity(intent);
+            }
+        });
         btn_logout=view.findViewById(R.id.btn_logout);
-        btn_logout.setOnClickListener(this);
-        btn_setting.setOnClickListener(this);
-    }
-
-    @Override
-    public void onClick(View view) {
-        switch (view.getId())
-        {
-            case R.id.btn_logout:{
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
                 Intent intent= new Intent(getActivity(), ActivityLogin.class);
                 intent.putExtra("Username", users);
                 startActivity(intent);
                 getActivity().finish();
-                break;
             }
-            case R.id.btn_setting:{
-                Intent intent= new Intent(getActivity(), ActivityAccount.class);
-                intent.putExtra("Username", users);
-                startActivity(intent);
-                break;
-            }
-        }
+        });
     }
+
 }

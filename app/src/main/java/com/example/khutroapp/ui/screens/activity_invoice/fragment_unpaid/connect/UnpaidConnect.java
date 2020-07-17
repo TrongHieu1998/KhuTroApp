@@ -4,6 +4,7 @@ import android.os.AsyncTask;
 
 import com.example.khutroapp.ui.connect.JDBCController;
 import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
+import com.example.khutroapp.ui.screens.activity_invoice.fragment_unpaid.model.UnpaidModel;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -20,8 +21,8 @@ public class UnpaidConnect {
     public UnpaidConnect() {
         connection = jdbcController.ConnnectionData(); // Tạo kết nối tới database
     }
-    public List<PaidModel> loadPaid(String MaHdn) throws SQLException {
-        List<PaidModel> list = new ArrayList<>();
+    public List<UnpaidModel> loadUnPaid(String MaHdn) throws SQLException {
+        List<UnpaidModel> list = new ArrayList<>();
 
         Statement statement = connection.createStatement();
 
@@ -31,7 +32,7 @@ public class UnpaidConnect {
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
-            boolean add = list.add(new PaidModel(rs.getString("MAPHONG"),rs.getString("MAHOADON"), rs.getString("THANGNAM"),
+            boolean add = list.add(new UnpaidModel(rs.getString("MAPHONG"),rs.getString("MAHOADON"), rs.getString("THANGNAM"),
                     rs.getBigDecimal("TIENDIEN").toString(),rs.getBigDecimal("TIENNUOC").toString(),
                     rs.getBigDecimal("WIFI").toString(),rs.getBigDecimal("RAC").toString(),
                     rs.getBigDecimal("GIA").toString(),rs.getBigDecimal("TONGTIEN").toString()));

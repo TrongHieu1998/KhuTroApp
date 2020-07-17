@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#fff"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="190dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tiền phòng tháng: "
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:text="Mã hóa đơn"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Mã phòng"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tiền điện"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tiền nước"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tiền wifi"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tiền rác"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tiền phòng"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Tổng tiền"
+                    android:textSize="17sp"></TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Ghi chú"
+                    android:textSize="17sp"></TextView>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="65dp"
+                android:layout_width="100dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:id="@+id/txt_thangnam"
+                    android:layout_alignParentRight="true"
+                    android:text="5/2020"
+                    android:textSize="17sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/txt_thangnam"
+                    android:id="@+id/txt_mahdon"
+                    android:layout_alignParentRight="true"
+                    android:textSize="17sp"
+                    android:text="HDN001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_maphong"
+                    android:layout_below="@+id/txt_mahdon"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="P001"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_tiendien"
+                    android:layout_below="@+id/txt_maphong"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="150,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_tiennuoc"
+                    android:layout_below="@+id/txt_tiendien"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="36,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_tienwifi"
+                    android:layout_below="@+id/txt_tiennuoc"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="60,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_tienrac"
+                    android:layout_below="@+id/txt_tienwifi"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="20,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txt_tienphong"
+                    android:layout_below="@+id/txt_tienrac"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="1,000,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#F44336"
+                    android:id="@+id/txt_tongtien"
+                    android:layout_below="@+id/txt_tienphong"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="1,266,000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+                <TextView
+                    android:textStyle="bold"
+                    android:textColor="#292525"
+                    android:layout_below="@+id/txt_tongtien"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="10dp"
+                    android:textSize="17sp"
+                    android:text="Chưa nộp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp">
+                </TextView>
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

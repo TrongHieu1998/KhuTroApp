@@ -1,118 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:background="#fff"
         android:layout_marginBottom="30dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
-            android:background="#D7D7D7"
-            android:orientation="horizontal"
+            android:id="@+id/linertop"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#D7D7D7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <TextView
-                android:layout_marginLeft="130dp"
-                android:textStyle="bold"
-                android:gravity="center"
-                android:textSize="20sp"
-                android:text="Tháng: "
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-            </TextView>
+                android:layout_height="match_parent"
+                android:layout_marginLeft="130dp"
+                android:gravity="center"
+                android:text="Tháng: "
+                android:textSize="20sp"
+                android:textStyle="bold"></TextView>
+
             <TextView
-                android:textStyle="bold"
                 android:id="@+id/txt_thangnam"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:gravity="center"
                 android:text="5/2020"
                 android:textSize="20sp"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
+                android:textStyle="bold">
             </TextView>
         </LinearLayout>
+
         <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linertop">
+
             <TableRow>
+
                 <TextView
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="Dịch vụ"/>
+                    android:gravity="center"
+                    android:text="Dịch vụ"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="Chỉ số đầu"/>
+                    android:gravity="center"
+                    android:text="Chỉ số đầu"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="Chỉ số cuối"/>
+                    android:gravity="center"
+                    android:text="Chỉ số cuối"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
                 <TextView
-                    android:textStyle="bold"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="Đã sử dụng"/>
+                    android:gravity="center"
+                    android:text="Đã sử dụng"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </TableRow>
+
             <TableRow>
+
                 <TextView
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="Điện"/>
+                    android:gravity="center"
+                    android:text="Điện"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_csddau"
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="0"/>
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_csdcuoi"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="50"/>
+                    android:gravity="center"
+                    android:text="50"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_sodien"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="50"/>
+                    android:gravity="center"
+                    android:text="50"
+                    android:textSize="18sp" />
             </TableRow>
+
             <TableRow>
+
                 <TextView
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="Nước"/>
+                    android:gravity="center"
+                    android:text="Nước"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_csndau"
-                    android:gravity="center"
-                    android:textSize="18sp"
                     android:layout_width="100dp"
-                    android:text="0"/>
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_csncuoi"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="50"/>
+                    android:gravity="center"
+                    android:text="50"
+                    android:textSize="18sp" />
+
                 <TextView
                     android:id="@+id/txt_sonuoc"
-                    android:textSize="18sp"
-                    android:gravity="center"
                     android:layout_width="100dp"
-                    android:text="50"/>
+                    android:gravity="center"
+                    android:text="50"
+                    android:textSize="18sp" />
             </TableRow>
         </TableLayout>
-    </LinearLayout>
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,10 +1,10 @@
-package com.example.khutroapp.ui.screens.activity_indexwater.connect;
+package com.example.khutroapp.ui.screenchutro.activity_detailroom.connect;
 
 import android.os.AsyncTask;
 
 import com.example.khutroapp.ui.connect.JDBCController;
+import com.example.khutroapp.ui.screenchutro.activity_detailroom.model.DetailKhachThueModel;
 import com.example.khutroapp.ui.screens.activity_indexwater.model.IndexWaterModel;
-import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.PaidModel;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -13,33 +13,31 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IndexWaterConnect {
+public class DetailKhachThueConnect {
     private static final String TAG = "k";
     private JDBCController jdbcController = new JDBCController();
     private Connection connection;
 
-    public IndexWaterConnect() {
+    public DetailKhachThueConnect() {
         connection = jdbcController.ConnnectionData(); // Tạo kết nối tới database
     }
-    public List<IndexWaterModel> loadIndexWater(String makt) throws SQLException {
-        List<IndexWaterModel> list = new ArrayList<>();
+    public List<DetailKhachThueModel> loadDetailKT (String tenphong) throws SQLException {
+        List<DetailKhachThueModel> list = new ArrayList<>();
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT  KHACHTHUE.MAKT,THANGNAM,SODIENCU,SODIENMOI,SODIEN,SONUOCCU,SONUOCMOI,SONUOC\n" +
-                "FROM KHACHTHUE,PHONG, HOADON,CHISO_DIENNUOC \n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND PHONG.MAPHONG=HOADON.MAPHONG AND HOADON.MAHOADON=CHISO_DIENNUOC.MAHOADON AND MAKT='"+makt+"'";
+        String sql ="SELECT TENKT,NGAYSINH,GIOITINH,SDT,QUEQUAN\n" +
+                "FROM KHACHTHUE,PHONG\n" +
+                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND TENPHONG='"+tenphong+"'";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
-            boolean add = list.add(new IndexWaterModel(
-                    rs.getString("THANGNAM"),
-                    rs.getString("SODIENCU"),
-                    rs.getString("SODIENMOI"),
-                    rs.getString("SODIEN"),
-                    rs.getString("SONUOCCU"),
-                    rs.getString("SONUOCMOI"),
-                    rs.getString("SONUOC") ));
+            boolean add = list.add(new DetailKhachThueModel(
+                    rs.getString("TENKT"),
+                    rs.getDate("NGAYSINH").toString(),
+                    rs.getString("GIOITINH"),
+                    rs.getString("SDT"),
+                    rs.getString("QUEQUAN") ));
         }
         connection.close();// Đóng kết nối
         return list;

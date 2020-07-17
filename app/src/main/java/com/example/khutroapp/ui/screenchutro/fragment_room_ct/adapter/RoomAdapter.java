@@ -2,6 +2,7 @@ package com.example.khutroapp.ui.screenchutro.fragment_room_ct.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import android.widget.TextView;
 import androidx.cardview.widget.CardView;
 
 import com.example.khutroapp.R;
+import com.example.khutroapp.ui.screenchutro.activity_detailroom.ActivityDetailRoom;
 import com.example.khutroapp.ui.screenchutro.fragment_room_ct.model.RoomModel;
 import com.example.khutroapp.ui.screens.MainActivity;
 
@@ -44,7 +46,7 @@ public class RoomAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        RoomAdapter.ViewHolder holder;
+        final RoomAdapter.ViewHolder holder;
         if(convertView==null){
             convertView=layoutInflater.inflate(R.layout.item_room_ct,null);
             holder= new RoomAdapter.ViewHolder();
@@ -60,7 +62,7 @@ public class RoomAdapter extends BaseAdapter {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(context, MainActivity.class);
+                Intent intent = new Intent(context, ActivityDetailRoom.class);
                 intent.putExtra("TenPhong",roomModel.getTenphong());
                 context.startActivity(intent);
             }

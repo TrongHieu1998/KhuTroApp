@@ -26,6 +26,6 @@
             android:gravity="center"
             android:text="P.101"
             android:textColor="#FF5722"
-            android:textSize="20dp"></TextView>
+            android:textSize="17dp"></TextView>
     </LinearLayout>
 </androidx.cardview.widget.CardView>

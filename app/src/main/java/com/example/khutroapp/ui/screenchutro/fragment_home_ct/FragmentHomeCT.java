@@ -3,6 +3,7 @@ package com.example.khutroapp.ui.screenchutro.fragment_home_ct;
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
 
 import android.util.Log;
@@ -14,6 +15,7 @@ import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
 
 import com.example.khutroapp.R;
+import com.example.khutroapp.ui.screenchutro.activity_thongkedoanhthu.ActivityThongkedoanhthu;
 import com.example.khutroapp.ui.screens.activity_contract.ActivityContract;
 import com.example.khutroapp.ui.screens.activity_indexwater.ActivityIndexWater;
 import com.example.khutroapp.ui.screens.activity_infringe.ActivityInfringe;
@@ -61,12 +63,9 @@ public class FragmentHomeCT extends Fragment {
         return viewRoot;
     }
     String users;
-    RelativeLayout invoice,tabernacle,contract,roommate,infringe,indexwater;
+    ConstraintLayout thongkedoanhthu;
     void mapping(View view){
 
-        Intent intent =getActivity().getIntent();
-        users = intent.getStringExtra("Username");
-        Log.d("jame", "h:"+users);
         int img[]={R.drawable.phongtro1,R.drawable.phongtro2,R.drawable.phongtro3,R.drawable.phongtro4};
         viewFlipper=(ViewFlipper) view.findViewById(R.id.viewfliper);
         for(int i=0;i<img.length;i++)
@@ -77,16 +76,15 @@ public class FragmentHomeCT extends Fragment {
         {
             fliperImage(imgs);
         }
-        // chuyển qua màn hình hợp đồng
-//        contract=view.findViewById(R.id.contract);
-//        contract.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= new Intent(getContext(), ActivityContract.class);
-//                intent.putExtra("Username", users);
-//                startActivity(intent);
-//            }
-//        });
+        // chuyển qua màn hình thống kê doanh thu
+        thongkedoanhthu=view.findViewById(R.id.thongkedoanhthu);
+        thongkedoanhthu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(), ActivityThongkedoanhthu.class);
+                startActivity(intent);
+            }
+        });
 //        // chuyển qua màn hình hóa đơn
 //        invoice=view.findViewById(R.id.invoice);
 //        invoice.setOnClickListener(new View.OnClickListener() {

@@ -15,6 +15,8 @@ import android.widget.RelativeLayout;
 import android.widget.ViewFlipper;
 
 import com.example.khutroapp.R;
+import com.example.khutroapp.ui.screenchutro.activity_phongtrong.ActivityPhongtrong;
+import com.example.khutroapp.ui.screenchutro.activity_taohopdong.ActivityTaohopdong;
 import com.example.khutroapp.ui.screenchutro.activity_thongkedoanhthu.ActivityThongkedoanhthu;
 import com.example.khutroapp.ui.screens.activity_contract.ActivityContract;
 import com.example.khutroapp.ui.screens.activity_indexwater.ActivityIndexWater;
@@ -63,7 +65,7 @@ public class FragmentHomeCT extends Fragment {
         return viewRoot;
     }
     String users;
-    ConstraintLayout thongkedoanhthu;
+    ConstraintLayout thongkedoanhthu, taohopdong;
     void mapping(View view){
 
         int img[]={R.drawable.phongtro1,R.drawable.phongtro2,R.drawable.phongtro3,R.drawable.phongtro4};
@@ -85,16 +87,16 @@ public class FragmentHomeCT extends Fragment {
                 startActivity(intent);
             }
         });
-//        // chuyển qua màn hình hóa đơn
-//        invoice=view.findViewById(R.id.invoice);
-//        invoice.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent= new Intent(getContext(), ActivityInvoice.class);
-//                intent.putExtra("Username", users);
-//                startActivity(intent);
-//            }
-//        });
+        // chuyển qua màn tạo hợp đồng
+        taohopdong=view.findViewById(R.id.taohopdong);
+        taohopdong.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getContext(), ActivityPhongtrong.class);
+                intent.putExtra("Username", users);
+                startActivity(intent);
+            }
+        });
 //        // chuyển qua màn hình tạm trú
 //        tabernacle=view.findViewById(R.id.tabernacle);
 //        tabernacle.setOnClickListener(new View.OnClickListener() {

@@ -13,7 +13,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.screenchutro.activity_thongkedoanhthu.ActivityThongkedoanhthu"></activity>
+        <activity android:name=".ui.screenchutro.activity_phongtrong.ActivityPhongtrong"></activity>
+        <activity android:name=".ui.screenchutro.activity_taohopdong.ActivityTaohopdong" />
+        <activity android:name=".ui.screenchutro.activity_chotsodiennuoc.ActivityChotsodiennuoc" />
+        <activity android:name=".ui.screens.activity_changepassword.ActivityChangePassword" />
+        <activity android:name=".ui.screenchutro.activity_thongkedoanhthu.ActivityThongkedoanhthu" />
         <activity android:name=".ui.screenchutro.activity_detailroom.ActivityDetailRoom" />
         <activity android:name=".ui.screenchutro.activity_login_ct.ActivityLoginCT" />
         <activity android:name=".ui.ActivityWelcom">

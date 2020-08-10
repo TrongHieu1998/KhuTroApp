@@ -5,17 +5,17 @@ import com.bumptech.glide.load.engine.bitmap_recycle.ByteArrayAdapter;
 import java.io.ByteArrayInputStream;
 
 public class AccountModel {
-    String img;
+    byte [] image;
 
-    public AccountModel(String img) {
-        this.img = img;
+    public AccountModel(byte[] image) {
+        this.image = image;
     }
 
-    public String getImg() {
-        return img;
+    public byte[] getImage() {
+        return image;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImage(byte[] image) {
+        this.image = image;
     }
 }

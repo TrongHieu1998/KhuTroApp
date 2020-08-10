@@ -25,7 +25,7 @@ public class TabernacleConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT MATAMTRU,TENKT,NGAYLAMGIAY,NGAYHETHAN_TAMTRU,QUANHEVOICHUTRO\n" +
+        String sql ="SELECT MATAMTRU,TENKT,CONVERT(varchar,NGAYLAMGIAY, 103) NGAYLAMGIAY,CONVERT(varchar,NGAYHETHAN_TAMTRU, 103) NGAYHETHAN_TAMTRU,QUANHEVOICHUTRO\n" +
                 "FROM TAMTRU, KHACHTHUE\n" +
                 "WHERE KHACHTHUE.MAKT=TAMTRU.MAKT AND KHACHTHUE.MAKT='"+makt+"' ";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
@@ -34,8 +34,8 @@ public class TabernacleConnect {
             boolean add = list.add(new TabernacleModel(
                     rs.getString("MATAMTRU"),
                     rs.getString("TENKT"),
-                    rs.getDate("NGAYLAMGIAY").toString(),
-                    rs.getDate("NGAYHETHAN_TAMTRU").toString(),
+                    rs.getString("NGAYLAMGIAY"),
+                    rs.getString("NGAYHETHAN_TAMTRU"),
                     rs.getString("QUANHEVOICHUTRO")
             ));
         }

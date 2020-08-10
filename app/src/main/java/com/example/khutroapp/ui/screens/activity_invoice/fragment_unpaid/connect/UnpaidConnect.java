@@ -26,16 +26,24 @@ public class UnpaidConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT  KHACHTHUE.MAKT,PHONG.MAPHONG,MAHOADON,THANGNAM,TIENDIEN,TIENNUOC,WIFI,RAC,LOAIPHONG.GIA,TONGTIEN\n" +
-                "FROM KHACHTHUE,PHONG, HOADON,LOAIPHONG \n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND PHONG.MAPHONG=HOADON.MAPHONG AND PHONG.MALOAI=LOAIPHONG.MALOAI AND HOADON.TINHTRANG='false' AND MAKT='"+MaHdn+"'";
+        String sql ="SELECT PHONG.MAPHONG,MAHOADON,CONVERT(varchar,THANGNAM, 103) THANGNAM,\n" +
+                "CONVERT(decimal,TIENDIEN, 103)TIENDIEN,CONVERT(decimal,TIENNUOC, 103)\n" +
+                " TIENNUOC,CONVERT(decimal,WIFI, 103) WIFI,CONVERT(decimal,RAC, 103) RAC,CONVERT(decimal,LOAIPHONG.GIA, 103) GIA,CONVERT(decimal,TONGTIEN, 103) TONGTIEN\n" +
+                "FROM KHACHTHUEPHONG,PHONG, HOADON,LOAIPHONG \n" +
+                "WHERE KHACHTHUEPHONG.MAPHONG=PHONG.MAPHONG AND PHONG.MAPHONG=HOADON.MAPHONG AND PHONG.MALOAI=LOAIPHONG.MALOAI AND HOADON.TINHTRANG='false' AND MAKT='"+MaHdn+"'";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
-            boolean add = list.add(new UnpaidModel(rs.getString("MAPHONG"),rs.getString("MAHOADON"), rs.getString("THANGNAM"),
-                    rs.getBigDecimal("TIENDIEN").toString(),rs.getBigDecimal("TIENNUOC").toString(),
-                    rs.getBigDecimal("WIFI").toString(),rs.getBigDecimal("RAC").toString(),
-                    rs.getBigDecimal("GIA").toString(),rs.getBigDecimal("TONGTIEN").toString()));
+            boolean add = list.add(new UnpaidModel(
+                    rs.getString("MAPHONG"),
+                    rs.getString("MAHOADON"),
+                    rs.getString("THANGNAM"),
+                    rs.getBigDecimal("TIENDIEN").toString(),
+                    rs.getBigDecimal("TIENNUOC").toString(),
+                    rs.getBigDecimal("WIFI").toString()
+                    ,rs.getBigDecimal("RAC").toString(),
+                    rs.getBigDecimal("GIA").toString()
+                    ,rs.getBigDecimal("TONGTIEN").toString()));
 
         }
         connection.close();// Đóng kết nối

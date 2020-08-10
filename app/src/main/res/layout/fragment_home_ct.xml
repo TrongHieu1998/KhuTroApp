@@ -66,38 +66,38 @@
                     app:layout_constraintTop_toBottomOf="@+id/ic_thongkedoanhthu"></TextView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/tabernacle"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:background="@drawable/custom_cartview"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/contract">-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/taohopdong"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_cartview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thongkedoanhthu">
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/ic_staying"-->
-<!--                    android:layout_width="60dp"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:layout_centerHorizontal="true"-->
-<!--                    android:background="@drawable/icon_staying"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"></ImageView>-->
+                <ImageView
+                    android:id="@+id/ic_staying"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/icon_contract"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@+id/ic_staying"-->
-<!--                    android:layout_centerInParent="true"-->
-<!--                    android:text="Tạm trú"-->
-<!--                    android:textSize="16dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/ic_staying"></TextView>-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ic_staying"
+                    android:layout_centerInParent="true"
+                    android:text="Tạo hợp đồng"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_staying"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
 <!--                android:id="@+id/invoice"-->
@@ -141,7 +141,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/roommate"
+                android:id="@+id/thongkephong"
                 android:layout_width="150dp"
                 android:layout_height="120dp"
                 android:layout_marginTop="20dp"
@@ -173,39 +173,39 @@
                     app:layout_constraintTop_toBottomOf="@+id/ic_thongkephong"></TextView>
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
-<!--                android:id="@+id/infringe"-->
-<!--                android:layout_width="150dp"-->
-<!--                android:layout_height="120dp"-->
-<!--                android:layout_marginTop="20dp"-->
-<!--                android:background="@drawable/custom_cartview"-->
-<!--                app:layout_constraintEnd_toEndOf="parent"-->
-<!--                app:layout_constraintStart_toStartOf="parent"-->
-<!--                app:layout_constraintTop_toBottomOf="@+id/roommate">-->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/chotsodiennuoc"
+                android:layout_width="150dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/custom_cartview"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/thongkephong">
 
-<!--                <ImageView-->
-<!--                    android:id="@+id/ic_rules"-->
-<!--                    android:layout_width="60dp"-->
-<!--                    android:layout_height="60dp"-->
-<!--                    android:layout_alignParentTop="true"-->
-<!--                    android:layout_centerHorizontal="true"-->
-<!--                    android:layout_marginTop="10dp"-->
-<!--                    android:background="@drawable/icon_rules"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toTopOf="parent"></ImageView>-->
+                <ImageView
+                    android:id="@+id/ic_rules"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/icon_waterindex"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
 
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:layout_below="@+id/ic_rules"-->
-<!--                    android:layout_centerInParent="true"-->
-<!--                    android:text="Vi phạm"-->
-<!--                    android:textSize="16dp"-->
-<!--                    app:layout_constraintEnd_toEndOf="parent"-->
-<!--                    app:layout_constraintStart_toStartOf="parent"-->
-<!--                    app:layout_constraintTop_toBottomOf="@+id/ic_rules"></TextView>-->
-<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ic_rules"
+                    android:layout_centerInParent="true"
+                    android:text="Chốt sổ điện nước"
+                    android:textSize="15dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ic_rules"></TextView>
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 <!--            <androidx.constraintlayout.widget.ConstraintLayout-->
 <!--                android:id="@+id/indexwater"-->

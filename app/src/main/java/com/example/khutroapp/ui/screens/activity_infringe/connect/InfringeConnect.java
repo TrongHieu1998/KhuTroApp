@@ -26,7 +26,7 @@ public class InfringeConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT MAVIPHAM,NGAYVIPHAM,TENKT,NOIDUNG,HINHPHAT,NOIQUY.GHICHU\n" +
+        String sql ="SELECT MAVIPHAM,CONVERT(varchar,NGAYVIPHAM, 103) NGAYVIPHAM,TENKT,NOIDUNG,HINHPHAT,NOIQUY.GHICHU\n" +
                 "FROM KHACHTHUE,VIPHAM,NOIQUY\n" +
                 "WHERE KHACHTHUE.MAKT=VIPHAM.MAKT AND VIPHAM.MANOIQUY=NOIQUY.MANOIQUY AND KHACHTHUE.MAKT='"+makt+"' ";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
@@ -34,7 +34,7 @@ public class InfringeConnect {
         while (rs.next()) {
             boolean add = list.add(new InfringeModel(
                     rs.getString("MAVIPHAM"),
-                    rs.getDate("NGAYVIPHAM").toString(),
+                    rs.getString("NGAYVIPHAM"),
                     rs.getString("TENKT"),
                     rs.getString("NOIDUNG"),
                     rs.getString("HINHPHAT"),

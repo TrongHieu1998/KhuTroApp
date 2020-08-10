@@ -7,9 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".ui.screenchutro.activity_thongkedoanhthu.ActivityThongkedoanhthu">
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contraintoptop"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#CC9933"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_backChotsodiennuoc"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/custom_button_circle"
+            android:src="@drawable/ic_back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="THỐNG KÊ DOANH THU"
+            android:textColor="#333232"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"></TextView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/contraintop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/contraintoptop"
         android:layout_width="match_parent"
         android:layout_height="100dp">
 
@@ -59,7 +92,7 @@
                 </TextView>
                 <EditText
                     android:id="@+id/edt_thang"
-                    android:layout_width="60dp"
+                    android:layout_width="30dp"
                     android:layout_height="match_parent">
                 </EditText>
             </LinearLayout>
@@ -80,11 +113,200 @@
                 </TextView>
                 <EditText
                     android:id="@+id/edt_nam"
-                    android:layout_width="60dp"
+                    android:layout_width="50dp"
                     android:layout_height="match_parent">
                 </EditText>
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/contraintop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="500dp">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền cọc: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtiencoc"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền vi phạm: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtienvipham"
+                android:textSize="17sp"
+                android:text="0"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền điện: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtiendien"
+                android:textSize="17sp"
+                android:text="50.00"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền nước: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtiennuoc"
+                android:textSize="17sp"
+                android:text="50.00"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền wifi: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtienwifi"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền rác: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtienrac"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng tiền phòng: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongtienphong"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Tổng doanh thu: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongdanhthu"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="25dp">
+            <TextView
+                android:textSize="17sp"
+                android:text="Nợ: "
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+            <TextView
+                android:id="@+id/txt_tongno"
+                android:textSize="17sp"
+                android:text="50.000"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

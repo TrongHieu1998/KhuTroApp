@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
@@ -18,6 +20,7 @@ public class ActivityRoommate extends AppCompatActivity {
     String users;
     RoommateConnect roommateConnect= new RoommateConnect();
     RoommateAdapter adapter;
+    ImageView img_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +38,12 @@ public class ActivityRoommate extends AppCompatActivity {
         final ListView listView = findViewById(R.id.listviewRoommate);
         adapter= new RoommateAdapter(this,roommateModels);
         listView.setAdapter(adapter);
-
+        img_back=findViewById(R.id.img_backRoommate);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }

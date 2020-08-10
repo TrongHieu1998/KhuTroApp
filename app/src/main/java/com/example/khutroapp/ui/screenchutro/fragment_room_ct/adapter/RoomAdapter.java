@@ -62,6 +62,7 @@ public class RoomAdapter extends BaseAdapter {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent intent = new Intent(context, ActivityDetailRoom.class);
                 intent.putExtra("TenPhong",roomModel.getTenphong());
                 context.startActivity(intent);

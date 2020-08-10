@@ -37,7 +37,8 @@ public class SettingConnect {
                     rs.getDate("NGAYSINH").toString(),
                     rs.getString("GIOITINH"),
                     rs.getString("SDT"),
-                    rs.getString("QUEQUAN")
+                    rs.getString("QUEQUAN"),
+                    rs.getBytes("ANH")
             ));
         }
 

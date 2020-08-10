@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
@@ -18,6 +20,7 @@ public class ActivityTabernacle extends AppCompatActivity {
     String users;
     TabernacleConnect tabernacleConnect=new TabernacleConnect();
     TabernacleAdapter adapter;
+    ImageView img_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,5 +38,12 @@ public class ActivityTabernacle extends AppCompatActivity {
         final ListView listView = findViewById(R.id.listviewTabernacle);
         adapter= new TabernacleAdapter(this,tabernacleModels);
         listView.setAdapter(adapter);
+        img_back=findViewById(R.id.img_backTabernacle);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }

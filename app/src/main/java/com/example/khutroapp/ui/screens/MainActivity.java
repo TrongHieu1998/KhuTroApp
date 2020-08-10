@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Mai test máy thật
-//        OSPermissionSubscriptionState state;
-//        state = OneSignal.getPermissionSubscriptionState();
-//        Log.d("Hieu",state.getSubscriptionStatus().getUserId());
+        OSPermissionSubscriptionState state;
+        state = OneSignal.getPermissionSubscriptionState();
+        Log.d("Hieu",state.getSubscriptionStatus().getUserId());
 
 
         nav = findViewById(R.id.nav_view);

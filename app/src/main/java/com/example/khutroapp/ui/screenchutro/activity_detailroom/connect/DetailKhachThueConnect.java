@@ -26,15 +26,15 @@ public class DetailKhachThueConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT TENKT,NGAYSINH,GIOITINH,SDT,QUEQUAN\n" +
-                "FROM KHACHTHUE,PHONG\n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND TENPHONG='"+tenphong+"'";
+        String sql ="SELECT TENKT,CONVERT(varchar,NGAYSINH, 103) NGAYSINH,GIOITINH,SDT,QUEQUAN\n" +
+                "FROM KHACHTHUE,PHONG,KHACHTHUEPHONG\n" +
+                "WHERE KHACHTHUEPHONG.MAPHONG=PHONG.MAPHONG AND KHACHTHUE.MAKT=KHACHTHUEPHONG.MAKT AND TENPHONG='"+tenphong+"'";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
             boolean add = list.add(new DetailKhachThueModel(
                     rs.getString("TENKT"),
-                    rs.getDate("NGAYSINH").toString(),
+                    rs.getString("NGAYSINH"),
                     rs.getString("GIOITINH"),
                     rs.getString("SDT"),
                     rs.getString("QUEQUAN") ));

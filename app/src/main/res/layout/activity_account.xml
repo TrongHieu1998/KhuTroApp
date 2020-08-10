@@ -12,6 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="60dp">
         <ImageButton
+            android:id="@+id/img_backAcount"
             android:layout_marginLeft="10dp"
             android:layout_gravity="center"
             android:background="@drawable/custom_button_circle"
@@ -43,86 +44,85 @@
             app:civ_border_color="#FF000000"/>
     </FrameLayout>
     <LinearLayout
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        android:orientation="vertical"
+    android:layout_marginLeft="30dp"
+    android:layout_marginRight="30dp"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:textSize="17dp"
+        android:text="Họ tên"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TextView
-            android:layout_marginTop="20dp"
-            android:textSize="17dp"
-            android:text="Họ tên"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-        <EditText
-            android:paddingLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:textSize="17dp"
-            android:background="@drawable/custom_vien"
-            android:layout_width="match_parent"
-            android:layout_height="35dp">
-        </EditText>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:textSize="17dp"
-            android:text="Số điện thoại"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-        <EditText
-            android:paddingLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:textSize="17dp"
-            android:background="@drawable/custom_vien"
-            android:layout_width="match_parent"
-            android:layout_height="35dp">
-        </EditText>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:textSize="17dp"
-            android:text="Ngày sinh"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-        <EditText
-            android:paddingLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:textSize="17dp"
-            android:background="@drawable/custom_vien"
-            android:layout_width="match_parent"
-            android:layout_height="35dp">
-        </EditText>
-        <TextView
-            android:layout_marginTop="10dp"
-            android:textSize="17dp"
-            android:text="Địa chỉ"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </TextView>
-        <EditText
-            android:paddingLeft="10dp"
-            android:layout_marginTop="5dp"
-            android:textSize="17dp"
-            android:background="@drawable/custom_vien"
-            android:layout_width="match_parent"
-            android:layout_height="35dp">
-        </EditText>
-        <Button
-            android:textColor="#fff"
-            android:id="@+id/btn_taotaikhoan"
-            android:background="@drawable/custom_btn_login"
-            android:text="CẬP NHẬT"
-            android:layout_marginTop="30dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="50dp">
-        </Button>
-        <ListView
-            android:id="@+id/listviewAccount"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        </ListView>
-    </LinearLayout>
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/edt_hoten"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:background="@drawable/custom_vien"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </EditText>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="17dp"
+        android:text="Số điện thoại"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/edt_sdt"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:background="@drawable/custom_vien"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </EditText>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="17dp"
+        android:text="Ngày sinh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/edt_ngaysinh"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:background="@drawable/custom_vien"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </EditText>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="17dp"
+        android:text="Địa chỉ"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:id="@+id/edt_diachi"
+        android:paddingLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:textSize="17dp"
+        android:background="@drawable/custom_vien"
+        android:layout_width="match_parent"
+        android:layout_height="35dp">
+    </EditText>
+    <Button
+        android:textColor="#fff"
+        android:id="@+id/btn_capnhatthongtin"
+        android:background="@drawable/custom_btn_login"
+        android:text="CẬP NHẬT"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+    </Button>
+</LinearLayout>
 </LinearLayout>

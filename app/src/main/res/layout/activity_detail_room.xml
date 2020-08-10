@@ -1,37 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.screenchutro.activity_detailroom.ActivityDetailRoom">
-    <RelativeLayout
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="#CC9933"
-        android:id="@+id/textView3"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="40dp">
-        <TextView
-            android:layout_marginLeft="10dp"
-            android:paddingTop="5dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:text="Danh sách khách thuê"
-            android:textColor="#333232"
-            android:textSize="20dp"
-            android:textStyle="bold">
-        </TextView>
-    </RelativeLayout>
-    <ListView
-        android:id="@+id/listview_detail_khachthue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3">
-    </ListView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="#CC9933"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Danh sách khách thuê"
+                    android:textColor="#333232"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+            </LinearLayout>
+            <ListView
+                android:choiceMode="singleChoice"
+                android:listSelector="#F0FA8F"
+                android:id="@+id/listview_detail_khachthue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:background="#CC9933"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Danh sách hóa đơn"
+                    android:textColor="#333232"
+                    android:textSize="20dp"
+                    android:textStyle="bold">
+                </TextView>
+            </LinearLayout>
+            <ListView
+                android:id="@+id/listview_detail_Hoadon"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </ListView>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

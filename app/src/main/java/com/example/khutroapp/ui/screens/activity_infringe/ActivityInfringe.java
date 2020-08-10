@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.ListView;
 
 import com.example.khutroapp.R;
@@ -20,6 +22,7 @@ public class ActivityInfringe extends AppCompatActivity {
     InfringeConnect infringeConnect= new InfringeConnect();
     InfringeAdapter adapter;
     String users;
+    ImageView img_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,5 +40,12 @@ public class ActivityInfringe extends AppCompatActivity {
         final ListView listView = findViewById(R.id.listviewInfringe);
         adapter= new InfringeAdapter(this,infringeModels);
         listView.setAdapter(adapter);
+        img_back=findViewById(R.id.img_backInfinge);
+        img_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
     }
 }

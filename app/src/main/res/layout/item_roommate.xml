@@ -15,6 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:drawableLeft="@drawable/ic_name"
+                android:drawablePadding="10dp"
                 android:textSize="17sp"
                 android:text="Họ tên: "
                 android:layout_width="wrap_content"
@@ -35,6 +37,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_birthday"
                 android:textSize="17sp"
                 android:text="Ngày sinh: "
                 android:layout_width="wrap_content"
@@ -55,6 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_gioitinh"
                 android:textSize="17sp"
                 android:text="Giới tính: "
                 android:layout_width="wrap_content"
@@ -75,6 +81,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_call"
                 android:textSize="17sp"
                 android:text="Số điện thoại: "
                 android:layout_width="wrap_content"
@@ -96,6 +104,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <TextView
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_address"
                 android:textSize="17sp"
                 android:text="Quê quán: "
                 android:layout_width="wrap_content"

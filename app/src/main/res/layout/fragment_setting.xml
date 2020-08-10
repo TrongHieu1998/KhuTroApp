@@ -6,21 +6,142 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <ListView
-        android:id="@+id/listviewSetting"
+    <RelativeLayout
+        android:id="@+id/relativetop"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="290dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"></ListView>
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:background="@drawable/phongtro4"></ImageView>
+        </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/img_avatar"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/avatar"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_avatar"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:text="Bùi Thị Ninh"
+            android:textSize="20sp"></TextView>
+    </RelativeLayout>
+    <LinearLayout
+        android:id="@+id/linermid"
+        app:layout_constraintTop_toBottomOf="@+id/relativetop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="horizontal"
+        android:weightSum="10">
 
+        <LinearLayout
+            android:layout_marginLeft="20dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.4"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:drawableLeft="@drawable/ic_call"
+                android:drawablePadding="15dp"
+                android:text="Số điên thoại:"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_gioitinh"
+                android:drawablePadding="15dp"
+                android:text="Giới tính:"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_birthday"
+                android:drawablePadding="15dp"
+                android:text="Ngày sinh:"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawableLeft="@drawable/ic_address"
+                android:drawablePadding="15dp"
+                android:text="Địa chỉ:"
+                android:textSize="15sp"></TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6.6"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_phonenumber"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="20dp"
+                android:drawablePadding="15dp"
+                android:text="096277831"
+                android:textSize="15sp"></TextView>
+
+            <TextView
+                android:id="@+id/txt_gender"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="15dp"
+                android:text="Nữ"
+                android:textSize="15sp"></TextView>
+            <TextView
+                android:id="@+id/txt_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="15dp"
+                android:text="16/02/1998"
+                android:textSize="15sp"></TextView>
+            <TextView
+                android:id="@+id/txt_hometow"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:drawablePadding="15dp"
+                android:text="Quãng Ngải"
+                android:textSize="15sp"></TextView>
+        </LinearLayout>
+    </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="200dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/listviewSetting">
+        app:layout_constraintTop_toBottomOf="@+id/linermid">
         <LinearLayout
             android:id="@+id/linerleft"
             app:layout_constraintTop_toTopOf="parent"
@@ -37,6 +158,17 @@
                 android:gravity="center_vertical"
                 android:drawableLeft="@drawable/ic_person"
                 android:text="Thiết lập thông tin cá nhân"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+            </TextView>
+            <TextView
+                android:drawablePadding="10dp"
+                android:drawableLeft="@drawable/ic_key"
+                android:layout_marginTop="20dp"
+                android:text="Đổi mật khẩu"
+                android:gravity="center_vertical"
+                android:textColor="#111010"
+                android:textSize="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="30dp">
             </TextView>
@@ -67,12 +199,18 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:background="@drawable/ic_next"></ImageView>
-
+            <ImageView
+                android:background="@drawable/ic_next"
+                android:layout_marginTop="20dp"
+                android:id="@+id/btn_doimatkhau"
+                android:layout_width="30dp"
+                android:layout_height="30dp">
+            </ImageView>
             <ImageView
                 android:id="@+id/btn_logout"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="20dp"
                 android:background="@drawable/ic_next"></ImageView>
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

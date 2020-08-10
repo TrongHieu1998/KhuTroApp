@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardviewphongtrong"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="135dp"
+        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/img_phongtrong"
+            android:background="@drawable/icon_door"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+        </ImageView>
+        <TextView
+            android:layout_alignBottom="@+id/img_phongtrong"
+            android:id="@+id/txt_tenphong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="5dp"
+            android:gravity="center"
+            android:text="P.101"
+            android:textColor="#FF5722"
+            android:textSize="17dp"></TextView>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

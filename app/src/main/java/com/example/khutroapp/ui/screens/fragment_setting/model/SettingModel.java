@@ -3,9 +3,10 @@ package com.example.khutroapp.ui.screens.fragment_setting.model;
 import android.provider.MediaStore;
 
 public class SettingModel {
-    String tenkt,ngaysinh,gioitinh,sdt,quequan,avatar;
+    String tenkt,ngaysinh,gioitinh,sdt,quequan;
+    byte [] avatar;
 
-    public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan, String avatar) {
+    public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan, byte[] avatar) {
         this.tenkt = tenkt;
         this.ngaysinh = ngaysinh;
         this.gioitinh = gioitinh;
@@ -13,6 +14,7 @@ public class SettingModel {
         this.quequan = quequan;
         this.avatar = avatar;
     }
+
     public SettingModel(String tenkt, String ngaysinh, String gioitinh, String sdt, String quequan) {
         this.tenkt = tenkt;
         this.ngaysinh = ngaysinh;
@@ -20,11 +22,12 @@ public class SettingModel {
         this.sdt = sdt;
         this.quequan = quequan;
     }
-    public String getAvatar() {
+
+    public byte[] getAvatar() {
         return avatar;
     }
 
-    public void setAvatar(String avatar) {
+    public void setAvatar(byte[] avatar) {
         this.avatar = avatar;
     }
 

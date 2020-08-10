@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
@@ -50,20 +51,18 @@ public class AccountAdapter extends BaseAdapter {
         if(convertView==null){
             convertView=layoutInflater.inflate(R.layout.item_account,null);
             holder= new AccountAdapter.ViewHolder();
-            holder.img=(ImageView) convertView.findViewById(R.id.img_test);
+            holder.img= convertView.findViewById(R.id.img_test);
             convertView.setTag(holder);
         } else {
             holder=(AccountAdapter.ViewHolder)convertView.getTag();
         }
         AccountModel accountModel= this.listData.get(position);
-//        Glide.with(context)
-//                .load(accountModel.getImg())
-//                .into(holder.img);
-       Picasso.get().load(accountModel.getImg()).into(holder.img);
-
+        byte [] recordImage=accountModel.getImage();
+        Bitmap bitmap= BitmapFactory.decodeByteArray(recordImage,0,recordImage.length);
+        holder.img.setImageBitmap(bitmap);
         return convertView;
     }
     static class ViewHolder{
-        ImageView img;
+       ImageView img;
     }
 }

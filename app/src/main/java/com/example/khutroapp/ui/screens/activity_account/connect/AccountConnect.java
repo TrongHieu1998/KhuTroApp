@@ -7,6 +7,7 @@ import android.util.Base64;
 
 import com.example.khutroapp.ui.connect.JDBCController;
 import com.example.khutroapp.ui.screens.activity_account.model.AccountModel;
+import com.example.khutroapp.ui.screens.fragment_setting.model.SettingModel;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -28,17 +29,16 @@ public class AccountConnect  {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT TENKT,ANH \n" +
+        String sql ="SELECT TENKT,GIOITINH,SDT,NGAYSINH,QUEQUAN,ANH \n" +
                 "FROM KHACHTHUE\n" +
                 "WHERE KHACHTHUE.MAKT='"+makt+"' ";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
             boolean add = list.add(new AccountModel(
-                    rs.getString("ANH")
+                    rs.getBytes("ANH")
             ));
         }
-
         connection.close();// Đóng kết nối
         return list;
     }

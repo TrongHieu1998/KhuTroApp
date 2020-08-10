@@ -13,9 +13,9 @@ import com.example.khutroapp.ui.screens.activity_invoice.fragment_paid.model.Pai
 import java.util.List;
 
 public class PaidAdapter extends BaseAdapter {
+    private Context context;
     public List<PaidModel> listData;
     private LayoutInflater layoutInflater;
-    private Context context;
 
     public PaidAdapter(Context context,List<PaidModel> listData) {
         this.context = context;

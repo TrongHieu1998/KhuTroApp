@@ -25,14 +25,18 @@ public class RoommateConnect {
 
         Statement statement = connection.createStatement();
 
-        String sql ="SELECT TENKT,KHACHTHUE.GIOITINH,SDT,KHACHTHUE.NGAYSINH,KHACHTHUE.QUEQUAN FROM PHONG, KHACHTHUE\n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG \n" +
-                "AND PHONG.MAPHONG=(SELECT PHONG.MAPHONG FROM PHONG, KHACHTHUE \n" +
-                "WHERE KHACHTHUE.MAPHONG=PHONG.MAPHONG AND KHACHTHUE.MAKT='"+makt+"')";
+        String sql ="SELECT TENKT,KHACHTHUE.GIOITINH,SDT,CONVERT(varchar,KHACHTHUE.NGAYSINH, 103) NGAYSINH,\n" +
+                "\t\tKHACHTHUE.QUEQUAN FROM PHONG, KHACHTHUE, KHACHTHUEPHONG\n" +
+                "                WHERE KHACHTHUEPHONG.MAPHONG=PHONG.MAPHONG and KHACHTHUEPHONG.MAKT=KHACHTHUE.MAKT\n" +
+                "                AND PHONG.MAPHONG=(SELECT PHONG.MAPHONG FROM  PHONG, KHACHTHUE, KHACHTHUEPHONG\n" +
+                "                WHERE KHACHTHUEPHONG.MAPHONG=PHONG.MAPHONG and KHACHTHUEPHONG.MAKT=KHACHTHUE.MAKT and\n" +
+                "\t\t\t\t KHACHTHUE.MAKT='"+makt+"')\n" +
+                "\t\t\t\t and KHACHTHUE.MAKT not in (select KHACHTHUE.MAKT from KHACHTHUE\n" +
+                "\t\t\t\t\t\t\t\t\t\t\twhere KHACHTHUE.MAKT='"+makt+"')";
         // Thực thi câu lệnh SQL trả về đối tượng ResultSet. // Mọi kết quả trả về sẽ được lưu trong ResultSet
         ResultSet rs = statement.executeQuery(sql);
         while (rs.next()) {
-            boolean add = list.add(new RoommateModel( rs.getString("TENKT"), rs.getDate("NGAYSINH").toString(),
+            boolean add = list.add(new RoommateModel( rs.getString("TENKT"), rs.getString("NGAYSINH"),
                     rs.getString("GIOITINH"),rs.getString("SDT"),rs.getString("QUEQUAN")
             ));
         }
